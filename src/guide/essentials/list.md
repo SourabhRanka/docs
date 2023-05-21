@@ -200,7 +200,7 @@ And another for the index:
 
 ## `v-for` with a Range {#v-for-with-a-range}
 
-`v-for` can also take an integer. In this case it will repeat the template that many times, based on a range of `1...n`.
+`v-for` can also take an integer. In this case, it will repeat the template that many times, based on a range of `1...n`.
 
 ```vue-html
 <span v-for="n in 10">{{ n }}</span>
@@ -224,14 +224,14 @@ Similar to template `v-if`, you can also use a `<template>` tag with `v-for` to 
 ## `v-for` with `v-if` {#v-for-with-v-if}
 
 :::warning Note
-It's **not** recommended to use `v-if` and `v-for` on the same element due to implicit precedence. Refer to [style guide](/style-guide/rules-essential#avoid-v-if-with-v-for) for details.
+It's **not** recommended to use `v-if` and `v-for` on the same element due to implicit precedence. Refer to the [style guide](/style-guide/rules-essential#avoid-v-if-with-v-for) for details.
 :::
 
 When they exist on the same node, `v-if` has a higher priority than `v-for`. That means the `v-if` condition will not have access to variables from the scope of the `v-for`:
 
 ```vue-html
 <!--
-This will throw an error because property "todo"
+This will throw an error because the property "todo"
 is not defined on instance.
 -->
 <li v-for="todo in todos" v-if="!todo.isComplete">
